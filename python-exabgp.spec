@@ -8,10 +8,9 @@ Summary:        The BGP swiss army knife of networking (Library)
 
 Group:          Development/Libraries
 License:        BSD
-URL:            https://pypi.python.org/pypi/exabgp/
-Source0:	exabgp-%{version}.tar.gz
+URL:            https://github.com/Exa-Networks/
+Source0:        https://github.com/Exa-Networks/exabgp/archive/%{version}.tar.gz
 BuildArch:      noarch
-Provides:       exabgp-libs
 
 BuildRequires:  python-setuptools
 Requires:       python2 >= 2.6
@@ -24,7 +23,7 @@ ExaBGP python module
 Summary:        The BGP swiss army knife of networking
 Group:          Applications/Internet
 BuildRequires:  systemd-units
-Requires:       systemd, exabgp-libs == %{version}
+Requires:       systemd
 
 %description -n exabgp
 ExaBGP allows engineers to control their network from commodity servers. Think of it as Software Defined Networking using BGP by transforming BGP messages into friendly plain text or JSON.
@@ -90,5 +89,5 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %{_mandir}/man5/*
 
 %changelog
-* Tue May 18 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0
+* Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0
 - Initial release

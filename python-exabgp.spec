@@ -91,6 +91,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %{_mandir}/man1/*
 %{_mandir}/man5/*
 %config(noreplace) %{_sysconfdir}/exabgp/exabgp.conf
+%config(noreplace) %{_sysconfdir}/exabgp/examples/*
 
 %changelog
 * Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0

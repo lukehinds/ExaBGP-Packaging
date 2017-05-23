@@ -22,11 +22,11 @@ BuildRequires:  systemd-units
 Requires:       systemd
 
 %description -n exabgp
-ExaBGP allows engineers to control their network from commodity servers. 
-Think of it as Software Defined Networking using BGP by transforming BGP 
+ExaBGP allows engineers to control their network from commodity servers.
+Think of it as Software Defined Networking using BGP by transforming BGP
 messages into friendly plain text or JSON.
 It comes with an healthcheck application to help you monitor your daemons and
-withdraw dead ones from the network during failures/maintenances. 
+withdraw dead ones from the network during failures/maintenances.
 
 %prep
 %setup -q -n exabgp-%{version}

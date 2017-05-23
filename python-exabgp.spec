@@ -73,7 +73,8 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 
 %files
 %{python2_sitelib}/*
-%doc COPYRIGHT CHANGELOG README.md
+%doc CHANGELOG README.md
+%license COPYRIGHT
 
 %files -n exabgp
 %defattr(-,root,root,-)
@@ -85,9 +86,11 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %attr(644, root, root) %{_prefix}/share/exabgp/*
 %attr(644, root, root) %{_sysconfdir}/exabgp/examples/*
 %{_unitdir}/exabgp.service
-%doc COPYRIGHT CHANGELOG README.md
+%doc CHANGELOG README.md
+%license COPYRIGHT
 %{_mandir}/man1/*
 %{_mandir}/man5/*
+%config(noreplace) %{_sysconfdir}/exabgp/exabgp.conf
 
 %changelog
 * Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0

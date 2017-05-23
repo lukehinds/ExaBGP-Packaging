@@ -1,12 +1,8 @@
-%{!?__python2:        %global __python2 /usr/bin/python2}
-%{!?python2_sitelib:  %global python2_sitelib %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
-
 Name:           python-exabgp
 Version:        4.0.0
 Release:        1%{?dist}
 Summary:        The BGP swiss army knife of networking (Library)
 
-Group:          Development/Libraries
 License:        BSD
 URL:            https://github.com/Exa-Networks/
 Source0:        https://github.com/Exa-Networks/exabgp/archive/%{version}.tar.gz
@@ -70,7 +66,6 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %systemd_postun_with_restart exabgp.service
 
 %files
-%defattr(-,root,root,-)
 %{python2_sitelib}/*
 %doc COPYRIGHT CHANGELOG README.md
 

@@ -11,6 +11,7 @@ BuildArch:      noarch
 BuildRequires:  python-setuptools
 Requires:       python2 >= 2.6
 Requires:       python-ipaddr
+Requires:       python-six
 
 %description
 ExaBGP python module

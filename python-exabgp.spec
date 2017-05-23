@@ -9,6 +9,7 @@ Source0:        https://github.com/Exa-Networks/exabgp/archive/%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python-setuptools
+BuildRequires:  python-six
 Requires:       python2 >= 2.6
 Requires:       python-ipaddr
 Requires:       python-six

@@ -21,6 +21,7 @@ ExaBGP python module
 Summary:        The BGP swiss army knife of networking
 Group:          Applications/Internet
 BuildRequires:  systemd-units
+BuildRequires:  python-six
 Requires:       systemd
 
 %description -n exabgp

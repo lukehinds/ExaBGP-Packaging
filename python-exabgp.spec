@@ -69,7 +69,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %systemd_postun_with_restart exabgp.service
 
 %files
-%{python2_sitelib}/*
+%{python2_sitelib}/
 %doc COPYRIGHT CHANGELOG README.md
 
 %files -n exabgp

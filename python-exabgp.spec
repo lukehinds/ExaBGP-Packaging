@@ -32,10 +32,10 @@ withdraw dead ones from the network during failures/maintenances.
 %setup -q -n exabgp-%{version}
 
 %build
-%{__python2} setup.py build
+%{__python} setup.py build
 
 %install
-%{__python2} setup.py install -O1 --root ${RPM_BUILD_ROOT}
+%{__python} setup.py install -O1 --root ${RPM_BUILD_ROOT}
 
 install bin/healthcheck ${RPM_BUILD_ROOT}%{_bindir}
 mv ${RPM_BUILD_ROOT}%{_bindir} ${RPM_BUILD_ROOT}%{_sbindir}

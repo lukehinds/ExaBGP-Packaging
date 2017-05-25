@@ -13,6 +13,7 @@ BuildArch:      noarch
 
 BuildRequires:  python-setuptools
 BuildRequires:  python-six
+
 Requires:       python2 >= 2.6
 Requires:       python-ipaddr
 Requires:       python-six
@@ -24,7 +25,7 @@ ExaBGP python module
 Summary:        The BGP swiss army knife of networking
 Group:          Applications/Internet
 BuildRequires:  systemd-units
-#BuildRequires:  python-six
+BuildRequires:  python2-devel
 Requires:       systemd
 
 %description -n exabgp

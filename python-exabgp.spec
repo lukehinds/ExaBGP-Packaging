@@ -82,7 +82,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
 %dir %{_sysconfdir}/exabgp
 %dir %{_sysconfdir}/exabgp/examples
-%attr(644, root, root) %{_prefix}/share/exabgp/*
+%attr(644, root, root) %{_prefix}/share/exabgp/
 %attr(744, root, root) %{_prefix}/share/exabgp/processes/watchdog-1.sh
 %{_unitdir}/exabgp.service
 %doc CHANGELOG README.md

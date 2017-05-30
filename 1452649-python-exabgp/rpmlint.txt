@@ -1,0 +1,101 @@
+Checking: python-exabgp-4.0.0-1.fc25.noarch.rpm
+          exabgp-4.0.0-1.fc25.noarch.rpm
+          python-exabgp-4.0.0-1.fc25.src.rpm
+python-exabgp.noarch: W: spelling-error Summary(en_US) swiss -> swiz, Swiss, swigs
+python-exabgp.noarch: W: incoherent-version-in-changelog 4.0.0 ['4.0.0-1.fc25', '4.0.0-1']
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/application/tojson.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/application/tojson.py 644 /usr/bin/env python
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/application/bmp.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/application/bmp.py 644 /usr/bin/env python
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/reactor/api/response/json.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/reactor/api/response/json.py 644 /usr/bin/env python
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/reactor/api/response/text.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/reactor/api/response/text.py 644 /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/application/netlink.py 644 /usr/bin/python 
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/vendoring/bitstring.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/vendoring/bitstring.py 644 /usr/bin/env python
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/application/cli.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/application/cli.py 644 /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/netlink/old.py 644 /usr/bin/python 
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/application/healthcheck.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/application/healthcheck.py 644 /usr/bin/env python
+python-exabgp.noarch: E: wrong-script-interpreter /usr/lib/python2.7/site-packages/exabgp/reactor/api/options.py /usr/bin/env python
+python-exabgp.noarch: E: non-executable-script /usr/lib/python2.7/site-packages/exabgp/reactor/api/options.py 644 /usr/bin/env python
+exabgp.noarch: W: spelling-error Summary(en_US) swiss -> swiz, Swiss, swigs
+exabgp.noarch: W: spelling-error %description -l en_US healthcheck -> health check, health-check, leatherneck
+exabgp.noarch: W: spelling-error %description -l en_US maintenances -> maintenance, maintenance's, maintenance s
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-multisession.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-multisession.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-nexthop-self.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-nexthop-self.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-broken-flow.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-broken-flow.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-open.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-open.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-api.nothing.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-api.nothing.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-announcement.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-announcement.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-fast.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-fast.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/syslog-1.py 744
+exabgp.noarch: E: wrong-script-interpreter /usr/share/exabgp/processes/syslog-1.py /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-eor.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-eor.run /usr/bin/env python
+exabgp.noarch: W: spurious-executable-perm /usr/share/man/man5/exabgp.conf.5.gz
+exabgp.noarch: W: manual-page-warning /usr/share/man/man5/exabgp.conf.5.gz 3: warning: macro `OS' not defined
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-teardown.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-teardown.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-add-remove.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-add-remove.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-attributes.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-attributes.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/stderr-1.py 744
+exabgp.noarch: E: wrong-script-interpreter /usr/share/exabgp/processes/stderr-1.py /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-vpnv4.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-vpnv4.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/syslog-1.pyo 744
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/tcp-server 744
+exabgp.noarch: E: wrong-script-interpreter /usr/share/exabgp/processes/tcp-server /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/read-write.py 744
+exabgp.noarch: E: wrong-script-interpreter /usr/share/exabgp/processes/read-write.py /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/watchdog.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/watchdog.run /usr/bin/env python
+exabgp.noarch: E: script-without-shebang /usr/lib/systemd/system/exabgp.service
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/read-write.pyc 744
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-vpls.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-vpls.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-nexthop.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-nexthop.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-notification.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-notification.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-flow.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-flow.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-announce.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-announce.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/dynamic-1.pl 744
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-check.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-check.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/watchdog-1.pl 744
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-reload.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-reload.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/watchdog-1.sh 744
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/syslog-1.pyc 744
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/stderr-1.pyo 744
+exabgp.noarch: W: spurious-executable-perm /usr/share/man/man1/exabgp.1.gz
+exabgp.noarch: W: manual-page-warning /usr/share/man/man1/exabgp.1.gz 3: warning: macro `OS' not defined
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-api.receive.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-api.receive.run /usr/bin/env python
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/api-multi-neighbor.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/api-multi-neighbor.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/stderr-1.pyc 744
+exabgp.noarch: E: executable-marked-as-config-file /etc/exabgp/examples/manual-eor.run
+exabgp.noarch: E: wrong-script-interpreter /etc/exabgp/examples/manual-eor.run /usr/bin/env python
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/dynamic-1.sh 744
+exabgp.noarch: E: non-standard-executable-perm /usr/share/exabgp/processes/read-write.pyo 744
+exabgp.noarch: W: no-manual-page-for-binary exabgp-healthcheck
+python-exabgp.src: W: spelling-error Summary(en_US) swiss -> swiz, Swiss, swigs
+python-exabgp.src:86: W: macro-in-comment %attr
+python-exabgp.src:86: W: macro-in-comment %{_prefix}
+3 packages and 0 specfiles checked; 83 errors, 13 warnings.
+

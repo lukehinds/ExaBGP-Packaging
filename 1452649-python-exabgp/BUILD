@@ -1,0 +1,1 @@
+/var/lib/mock/fedora-25-x86_64/root/builddir/build/BUILD

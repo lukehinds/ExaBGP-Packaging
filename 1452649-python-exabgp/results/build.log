@@ -1,0 +1,1466 @@
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/python-exabgp.spec'], logger=<mockbuild.trace_decorator.getLog object at 0x7fca004fa3c8>uid=1000user='mockbuild'gid=135printOutput=Falseenv={'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_GB.UTF-8'}timeout=0nspawn_args=[]chrootPath='/var/lib/mock/fedora-25-x86_64/root'shell=False)
+Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/python-exabgp.spec'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_GB.UTF-8'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/python-exabgp-4.0.0-1.fc25.src.rpm
+Child return code was: 0
+ENTER ['do'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-exabgp.spec'], logger=<mockbuild.trace_decorator.getLog object at 0x7fca004fa3c8>uid=1000user='mockbuild'gid=135printOutput=Falseenv={'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_GB.UTF-8'}timeout=0nspawn_args=[]chrootPath='/var/lib/mock/fedora-25-x86_64/root'shell=False)
+Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-exabgp.spec'] with env {'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'TERM': 'vt100', 'HOME': '/builddir', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'LANG': 'en_GB.UTF-8'} and shell False
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.L4x8tX
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf exabgp-4.0.0
++ /usr/bin/gzip -dc /builddir/build/SOURCES/4.0.0.tar.gz
++ /usr/bin/tar -xof -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd exabgp-4.0.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.yvj4xY
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ /usr/bin/python2 setup.py build
+/usr/lib/python2.7/site-packages/setuptools/dist.py:373: UserWarning: The version specified ('4.0.0-0478a014') is an invalid version, this may not work as expected with newer versions of setuptools, pip, and PyPI. Please see PEP 440 for more details.
+  "details." % self.metadata.version
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/exabgp
+copying lib/exabgp/debug.py -> build/lib/exabgp
+copying lib/exabgp/__main__.py -> build/lib/exabgp
+copying lib/exabgp/version.py -> build/lib/exabgp
+copying lib/exabgp/logger.py -> build/lib/exabgp
+copying lib/exabgp/__init__.py -> build/lib/exabgp
+creating build/lib/exabgp/reactor
+copying lib/exabgp/reactor/protocol.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/loop.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/peer.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/listener.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/__init__.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/daemon.py -> build/lib/exabgp/reactor
+creating build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/transcoder.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/__init__.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/processes.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/options.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/api.py -> build/lib/exabgp/reactor/api
+creating build/lib/exabgp/reactor/api/parser
+copying lib/exabgp/reactor/api/parser/text.py -> build/lib/exabgp/reactor/api/parser
+copying lib/exabgp/reactor/api/parser/__init__.py -> build/lib/exabgp/reactor/api/parser
+creating build/lib/exabgp/reactor/api/command
+copying lib/exabgp/reactor/api/command/text.py -> build/lib/exabgp/reactor/api/command
+copying lib/exabgp/reactor/api/command/__init__.py -> build/lib/exabgp/reactor/api/command
+creating build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/text.py -> build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/__init__.py -> build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/json.py -> build/lib/exabgp/reactor/api/response
+creating build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/tcp.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/incoming.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/__init__.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/outgoing.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/error.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/connection.py -> build/lib/exabgp/reactor/network
+creating build/lib/exabgp/bgp
+copying lib/exabgp/bgp/timer.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/neighbor.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/fsm.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/__init__.py -> build/lib/exabgp/bgp
+creating build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/nop.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/direction.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/refresh.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/__init__.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/message.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/operational.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/notification.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/unknown.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/keepalive.py -> build/lib/exabgp/bgp/message
+creating build/lib/exabgp/bgp/message/update
+copying lib/exabgp/bgp/message/update/eor.py -> build/lib/exabgp/bgp/message/update
+copying lib/exabgp/bgp/message/update/__init__.py -> build/lib/exabgp/bgp/message/update
+creating build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/ipvpn.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/rtc.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/nlri.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/inet.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/flow.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/labelled.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/__init__.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/cidr.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/vpls.py -> build/lib/exabgp/bgp/message/update/nlri
+creating build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/prefixv4.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/nlri.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/link.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/node.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+creating build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/neighaddr.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/prefix.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ifaceaddr.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/linkid.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ipreach.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/node.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ospfroute.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+creating build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/mac.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/nlri.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/prefix.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/segment.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/ethernetad.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/multicast.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+creating build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/mac.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/rd.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/esi.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/path.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/labels.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/etag.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+creating build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/attribute.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/localpref.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/origin.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/mprnlri.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/med.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/originatorid.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aspath.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/pmsi.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/atomicaggregate.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/generic.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/nexthop.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aggregator.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/__init__.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aigp.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/attributes.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/clusterlist.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/mpurnlri.py -> build/lib/exabgp/bgp/message/update/attribute
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls
+copying lib/exabgp/bgp/message/update/attribute/bgpls/linkstate.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls
+copying lib/exabgp/bgp/message/update/attribute/bgpls/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srigpprefixattr.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igptags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/ospfaddr.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpflags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/prefixmetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpextags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srprefix.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srrid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/nodename.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/lterid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/isisarea.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/nodeflags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/srcap.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/sralgo.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/srlg.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/mplsmask.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/maxbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/rterid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/temetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/unrsvpbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/sradjlan.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/protection.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/sradj.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/linkname.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/admingroup.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/rsvpbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/igpmetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+creating build/lib/exabgp/bgp/message/update/attribute/community
+copying lib/exabgp/bgp/message/update/attribute/community/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community
+creating build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/rt_record.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/chso.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/origin.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/flowspec_scope.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/rt.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/encapsulation.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/l2info.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/traffic.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+creating build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+creating build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+creating build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/holdtime.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/asn.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/version.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/routerid.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/__init__.py -> build/lib/exabgp/bgp/message/open
+creating build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/ms.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/negotiated.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/graceful.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/asn4.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/capability.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/capabilities.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/hostname.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/refresh.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/__init__.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/mp.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/operational.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/unknown.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/addpath.py -> build/lib/exabgp/bgp/message/open/capability
+creating build/lib/exabgp/application
+copying lib/exabgp/application/netlink.py -> build/lib/exabgp/application
+copying lib/exabgp/application/healthcheck.py -> build/lib/exabgp/application
+copying lib/exabgp/application/control.py -> build/lib/exabgp/application
+copying lib/exabgp/application/bgp.py -> build/lib/exabgp/application
+copying lib/exabgp/application/cli.py -> build/lib/exabgp/application
+copying lib/exabgp/application/__init__.py -> build/lib/exabgp/application
+copying lib/exabgp/application/tojson.py -> build/lib/exabgp/application
+copying lib/exabgp/application/bmp.py -> build/lib/exabgp/application
+creating build/lib/exabgp/netlink
+copying lib/exabgp/netlink/firewall.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/netlink.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/tc.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/__init__.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/message.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/attributes.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/old.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/sequence.py -> build/lib/exabgp/netlink
+creating build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/neighbor.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/address.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/link.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/__init__.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/network.py -> build/lib/exabgp/netlink/route
+creating build/lib/exabgp/protocol
+copying lib/exabgp/protocol/resource.py -> build/lib/exabgp/protocol
+copying lib/exabgp/protocol/family.py -> build/lib/exabgp/protocol
+copying lib/exabgp/protocol/__init__.py -> build/lib/exabgp/protocol
+creating build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/icmp.py -> build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/fragment.py -> build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/__init__.py -> build/lib/exabgp/protocol/ip
+creating build/lib/exabgp/protocol/ip/tcp
+copying lib/exabgp/protocol/ip/tcp/flag.py -> build/lib/exabgp/protocol/ip/tcp
+copying lib/exabgp/protocol/ip/tcp/__init__.py -> build/lib/exabgp/protocol/ip/tcp
+creating build/lib/exabgp/protocol/iso
+copying lib/exabgp/protocol/iso/__init__.py -> build/lib/exabgp/protocol/iso
+creating build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/pyparsing.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/gcdump.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/ordereddict.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/objgraph.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/docopt.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/cmd2.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/profiler.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/counter.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/six.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/lsprofcalltree.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/bitstring.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/__init__.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/ipaddress.py -> build/lib/exabgp/vendoring
+creating build/lib/exabgp/rib
+copying lib/exabgp/rib/change.py -> build/lib/exabgp/rib
+copying lib/exabgp/rib/store.py -> build/lib/exabgp/rib
+copying lib/exabgp/rib/__init__.py -> build/lib/exabgp/rib
+creating build/lib/exabgp/configuration
+copying lib/exabgp/configuration/usage.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/parser.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/family.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/environment.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/capability.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/setup.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/check.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/configuration.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/__init__.py -> build/lib/exabgp/configuration
+creating build/lib/exabgp/configuration/process
+copying lib/exabgp/configuration/process/parser.py -> build/lib/exabgp/configuration/process
+copying lib/exabgp/configuration/process/__init__.py -> build/lib/exabgp/configuration/process
+creating build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/location.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/scope.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/section.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/format.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/__init__.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/error.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/tokeniser.py -> build/lib/exabgp/configuration/core
+creating build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/parser.py -> build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/__init__.py -> build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/vpls.py -> build/lib/exabgp/configuration/l2vpn
+creating build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/parser.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/mpls.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/route.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/__init__.py -> build/lib/exabgp/configuration/static
+creating build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/parser.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/scope.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/match.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/route.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/then.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/__init__.py -> build/lib/exabgp/configuration/flow
+creating build/lib/exabgp/configuration/operational
+copying lib/exabgp/configuration/operational/parser.py -> build/lib/exabgp/configuration/operational
+copying lib/exabgp/configuration/operational/__init__.py -> build/lib/exabgp/configuration/operational
+creating build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/parser.py -> build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/__init__.py -> build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/api.py -> build/lib/exabgp/configuration/neighbor
+creating build/lib/exabgp/configuration/template
+copying lib/exabgp/configuration/template/neighbor.py -> build/lib/exabgp/configuration/template
+copying lib/exabgp/configuration/template/__init__.py -> build/lib/exabgp/configuration/template
+creating build/lib/exabgp/util
+copying lib/exabgp/util/hashtable.py -> build/lib/exabgp/util
+copying lib/exabgp/util/usage.py -> build/lib/exabgp/util
+copying lib/exabgp/util/trace.py -> build/lib/exabgp/util
+copying lib/exabgp/util/od.py -> build/lib/exabgp/util
+copying lib/exabgp/util/panic.py -> build/lib/exabgp/util
+copying lib/exabgp/util/enumeration.py -> build/lib/exabgp/util
+copying lib/exabgp/util/coroutine.py -> build/lib/exabgp/util
+copying lib/exabgp/util/errstr.py -> build/lib/exabgp/util
+copying lib/exabgp/util/cache.py -> build/lib/exabgp/util
+copying lib/exabgp/util/dictionary.py -> build/lib/exabgp/util
+copying lib/exabgp/util/ip.py -> build/lib/exabgp/util
+copying lib/exabgp/util/__init__.py -> build/lib/exabgp/util
+copying lib/exabgp/util/test.py -> build/lib/exabgp/util
+creating build/lib/exabgp/data
+copying lib/exabgp/data/check.py -> build/lib/exabgp/data
+copying lib/exabgp/data/__init__.py -> build/lib/exabgp/data
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.gDm9d0
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
+++ dirname /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
++ cd exabgp-4.0.0
++ /usr/bin/python2 setup.py install -O1 --root /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
+/usr/lib/python2.7/site-packages/setuptools/dist.py:373: UserWarning: The version specified ('4.0.0-0478a014') is an invalid version, this may not work as expected with newer versions of setuptools, pip, and PyPI. Please see PEP 440 for more details.
+  "details." % self.metadata.version
+removing left-over egg
+running install
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/exabgp
+copying lib/exabgp/debug.py -> build/lib/exabgp
+copying lib/exabgp/__main__.py -> build/lib/exabgp
+copying lib/exabgp/version.py -> build/lib/exabgp
+copying lib/exabgp/logger.py -> build/lib/exabgp
+copying lib/exabgp/__init__.py -> build/lib/exabgp
+creating build/lib/exabgp/reactor
+copying lib/exabgp/reactor/protocol.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/loop.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/peer.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/listener.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/__init__.py -> build/lib/exabgp/reactor
+copying lib/exabgp/reactor/daemon.py -> build/lib/exabgp/reactor
+creating build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/transcoder.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/__init__.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/processes.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/options.py -> build/lib/exabgp/reactor/api
+copying lib/exabgp/reactor/api/api.py -> build/lib/exabgp/reactor/api
+creating build/lib/exabgp/reactor/api/parser
+copying lib/exabgp/reactor/api/parser/text.py -> build/lib/exabgp/reactor/api/parser
+copying lib/exabgp/reactor/api/parser/__init__.py -> build/lib/exabgp/reactor/api/parser
+creating build/lib/exabgp/reactor/api/command
+copying lib/exabgp/reactor/api/command/text.py -> build/lib/exabgp/reactor/api/command
+copying lib/exabgp/reactor/api/command/__init__.py -> build/lib/exabgp/reactor/api/command
+creating build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/text.py -> build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/__init__.py -> build/lib/exabgp/reactor/api/response
+copying lib/exabgp/reactor/api/response/json.py -> build/lib/exabgp/reactor/api/response
+creating build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/tcp.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/incoming.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/__init__.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/outgoing.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/error.py -> build/lib/exabgp/reactor/network
+copying lib/exabgp/reactor/network/connection.py -> build/lib/exabgp/reactor/network
+creating build/lib/exabgp/bgp
+copying lib/exabgp/bgp/timer.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/neighbor.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/fsm.py -> build/lib/exabgp/bgp
+copying lib/exabgp/bgp/__init__.py -> build/lib/exabgp/bgp
+creating build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/nop.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/direction.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/refresh.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/__init__.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/message.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/operational.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/notification.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/unknown.py -> build/lib/exabgp/bgp/message
+copying lib/exabgp/bgp/message/keepalive.py -> build/lib/exabgp/bgp/message
+creating build/lib/exabgp/bgp/message/update
+copying lib/exabgp/bgp/message/update/eor.py -> build/lib/exabgp/bgp/message/update
+copying lib/exabgp/bgp/message/update/__init__.py -> build/lib/exabgp/bgp/message/update
+creating build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/ipvpn.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/rtc.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/nlri.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/inet.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/flow.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/labelled.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/__init__.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/cidr.py -> build/lib/exabgp/bgp/message/update/nlri
+copying lib/exabgp/bgp/message/update/nlri/vpls.py -> build/lib/exabgp/bgp/message/update/nlri
+creating build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/prefixv4.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/nlri.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/link.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+copying lib/exabgp/bgp/message/update/nlri/bgpls/node.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls
+creating build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/neighaddr.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/prefix.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ifaceaddr.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/linkid.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ipreach.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/node.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ospfroute.py -> build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs
+creating build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/mac.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/nlri.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/prefix.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/segment.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/ethernetad.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+copying lib/exabgp/bgp/message/update/nlri/evpn/multicast.py -> build/lib/exabgp/bgp/message/update/nlri/evpn
+creating build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/mac.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/rd.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/esi.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/path.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/labels.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/etag.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+copying lib/exabgp/bgp/message/update/nlri/qualifier/__init__.py -> build/lib/exabgp/bgp/message/update/nlri/qualifier
+creating build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/attribute.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/localpref.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/origin.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/mprnlri.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/med.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/originatorid.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aspath.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/pmsi.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/atomicaggregate.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/generic.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/nexthop.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aggregator.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/__init__.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/aigp.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/attributes.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/clusterlist.py -> build/lib/exabgp/bgp/message/update/attribute
+copying lib/exabgp/bgp/message/update/attribute/mpurnlri.py -> build/lib/exabgp/bgp/message/update/attribute
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls
+copying lib/exabgp/bgp/message/update/attribute/bgpls/linkstate.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls
+copying lib/exabgp/bgp/message/update/attribute/bgpls/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srigpprefixattr.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igptags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/ospfaddr.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpflags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/prefixmetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpextags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srprefix.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srrid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying lib/exabgp/bgp/message/update/attribute/bgpls/prefix/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/nodename.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/lterid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/isisarea.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/nodeflags.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/srcap.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+copying lib/exabgp/bgp/message/update/attribute/bgpls/node/sralgo.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/node
+creating build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/srlg.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/opaque.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/mplsmask.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/maxbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/rterid.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/temetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/unrsvpbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/sradjlan.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/protection.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/sradj.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/linkname.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/admingroup.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/rsvpbw.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+copying lib/exabgp/bgp/message/update/attribute/bgpls/link/igpmetric.py -> build/lib/exabgp/bgp/message/update/attribute/bgpls/link
+creating build/lib/exabgp/bgp/message/update/attribute/community
+copying lib/exabgp/bgp/message/update/attribute/community/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community
+creating build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/rt_record.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/chso.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/origin.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/flowspec_scope.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/rt.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/encapsulation.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/l2info.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+copying lib/exabgp/bgp/message/update/attribute/community/extended/traffic.py -> build/lib/exabgp/bgp/message/update/attribute/community/extended
+creating build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+copying lib/exabgp/bgp/message/update/attribute/community/large/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/large
+creating build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/communities.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/__init__.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+copying lib/exabgp/bgp/message/update/attribute/community/initial/community.py -> build/lib/exabgp/bgp/message/update/attribute/community/initial
+creating build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/holdtime.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/asn.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/version.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/routerid.py -> build/lib/exabgp/bgp/message/open
+copying lib/exabgp/bgp/message/open/__init__.py -> build/lib/exabgp/bgp/message/open
+creating build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/ms.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/negotiated.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/graceful.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/asn4.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/capability.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/capabilities.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/hostname.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/refresh.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/__init__.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/mp.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/operational.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/unknown.py -> build/lib/exabgp/bgp/message/open/capability
+copying lib/exabgp/bgp/message/open/capability/addpath.py -> build/lib/exabgp/bgp/message/open/capability
+creating build/lib/exabgp/application
+copying lib/exabgp/application/netlink.py -> build/lib/exabgp/application
+copying lib/exabgp/application/healthcheck.py -> build/lib/exabgp/application
+copying lib/exabgp/application/control.py -> build/lib/exabgp/application
+copying lib/exabgp/application/bgp.py -> build/lib/exabgp/application
+copying lib/exabgp/application/cli.py -> build/lib/exabgp/application
+copying lib/exabgp/application/__init__.py -> build/lib/exabgp/application
+copying lib/exabgp/application/tojson.py -> build/lib/exabgp/application
+copying lib/exabgp/application/bmp.py -> build/lib/exabgp/application
+creating build/lib/exabgp/netlink
+copying lib/exabgp/netlink/firewall.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/netlink.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/tc.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/__init__.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/message.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/attributes.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/old.py -> build/lib/exabgp/netlink
+copying lib/exabgp/netlink/sequence.py -> build/lib/exabgp/netlink
+creating build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/neighbor.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/address.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/link.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/__init__.py -> build/lib/exabgp/netlink/route
+copying lib/exabgp/netlink/route/network.py -> build/lib/exabgp/netlink/route
+creating build/lib/exabgp/protocol
+copying lib/exabgp/protocol/resource.py -> build/lib/exabgp/protocol
+copying lib/exabgp/protocol/family.py -> build/lib/exabgp/protocol
+copying lib/exabgp/protocol/__init__.py -> build/lib/exabgp/protocol
+creating build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/icmp.py -> build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/fragment.py -> build/lib/exabgp/protocol/ip
+copying lib/exabgp/protocol/ip/__init__.py -> build/lib/exabgp/protocol/ip
+creating build/lib/exabgp/protocol/ip/tcp
+copying lib/exabgp/protocol/ip/tcp/flag.py -> build/lib/exabgp/protocol/ip/tcp
+copying lib/exabgp/protocol/ip/tcp/__init__.py -> build/lib/exabgp/protocol/ip/tcp
+creating build/lib/exabgp/protocol/iso
+copying lib/exabgp/protocol/iso/__init__.py -> build/lib/exabgp/protocol/iso
+creating build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/pyparsing.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/gcdump.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/ordereddict.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/objgraph.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/docopt.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/cmd2.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/profiler.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/counter.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/six.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/lsprofcalltree.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/bitstring.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/__init__.py -> build/lib/exabgp/vendoring
+copying lib/exabgp/vendoring/ipaddress.py -> build/lib/exabgp/vendoring
+creating build/lib/exabgp/rib
+copying lib/exabgp/rib/change.py -> build/lib/exabgp/rib
+copying lib/exabgp/rib/store.py -> build/lib/exabgp/rib
+copying lib/exabgp/rib/__init__.py -> build/lib/exabgp/rib
+creating build/lib/exabgp/configuration
+copying lib/exabgp/configuration/usage.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/parser.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/family.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/environment.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/capability.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/setup.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/check.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/configuration.py -> build/lib/exabgp/configuration
+copying lib/exabgp/configuration/__init__.py -> build/lib/exabgp/configuration
+creating build/lib/exabgp/configuration/process
+copying lib/exabgp/configuration/process/parser.py -> build/lib/exabgp/configuration/process
+copying lib/exabgp/configuration/process/__init__.py -> build/lib/exabgp/configuration/process
+creating build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/location.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/scope.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/section.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/format.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/__init__.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/error.py -> build/lib/exabgp/configuration/core
+copying lib/exabgp/configuration/core/tokeniser.py -> build/lib/exabgp/configuration/core
+creating build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/parser.py -> build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/__init__.py -> build/lib/exabgp/configuration/l2vpn
+copying lib/exabgp/configuration/l2vpn/vpls.py -> build/lib/exabgp/configuration/l2vpn
+creating build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/parser.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/mpls.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/route.py -> build/lib/exabgp/configuration/static
+copying lib/exabgp/configuration/static/__init__.py -> build/lib/exabgp/configuration/static
+creating build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/parser.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/scope.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/match.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/route.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/then.py -> build/lib/exabgp/configuration/flow
+copying lib/exabgp/configuration/flow/__init__.py -> build/lib/exabgp/configuration/flow
+creating build/lib/exabgp/configuration/operational
+copying lib/exabgp/configuration/operational/parser.py -> build/lib/exabgp/configuration/operational
+copying lib/exabgp/configuration/operational/__init__.py -> build/lib/exabgp/configuration/operational
+creating build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/parser.py -> build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/__init__.py -> build/lib/exabgp/configuration/neighbor
+copying lib/exabgp/configuration/neighbor/api.py -> build/lib/exabgp/configuration/neighbor
+creating build/lib/exabgp/configuration/template
+copying lib/exabgp/configuration/template/neighbor.py -> build/lib/exabgp/configuration/template
+copying lib/exabgp/configuration/template/__init__.py -> build/lib/exabgp/configuration/template
+creating build/lib/exabgp/util
+copying lib/exabgp/util/hashtable.py -> build/lib/exabgp/util
+copying lib/exabgp/util/usage.py -> build/lib/exabgp/util
+copying lib/exabgp/util/trace.py -> build/lib/exabgp/util
+copying lib/exabgp/util/od.py -> build/lib/exabgp/util
+copying lib/exabgp/util/panic.py -> build/lib/exabgp/util
+copying lib/exabgp/util/enumeration.py -> build/lib/exabgp/util
+copying lib/exabgp/util/coroutine.py -> build/lib/exabgp/util
+copying lib/exabgp/util/errstr.py -> build/lib/exabgp/util
+copying lib/exabgp/util/cache.py -> build/lib/exabgp/util
+copying lib/exabgp/util/dictionary.py -> build/lib/exabgp/util
+copying lib/exabgp/util/ip.py -> build/lib/exabgp/util
+copying lib/exabgp/util/__init__.py -> build/lib/exabgp/util
+copying lib/exabgp/util/test.py -> build/lib/exabgp/util
+creating build/lib/exabgp/data
+copying lib/exabgp/data/check.py -> build/lib/exabgp/data
+copying lib/exabgp/data/__init__.py -> build/lib/exabgp/data
+running install_lib
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+copying build/lib/exabgp/debug.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+copying build/lib/exabgp/__main__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/parser
+copying build/lib/exabgp/reactor/api/parser/text.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/parser
+copying build/lib/exabgp/reactor/api/parser/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/parser
+copying build/lib/exabgp/reactor/api/transcoder.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/command
+copying build/lib/exabgp/reactor/api/command/text.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/command
+copying build/lib/exabgp/reactor/api/command/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/command
+copying build/lib/exabgp/reactor/api/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response
+copying build/lib/exabgp/reactor/api/response/text.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response
+copying build/lib/exabgp/reactor/api/response/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response
+copying build/lib/exabgp/reactor/api/response/json.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response
+copying build/lib/exabgp/reactor/api/processes.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+copying build/lib/exabgp/reactor/api/options.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+copying build/lib/exabgp/reactor/api/api.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/tcp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/incoming.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/outgoing.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/error.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/network/connection.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network
+copying build/lib/exabgp/reactor/protocol.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+copying build/lib/exabgp/reactor/loop.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+copying build/lib/exabgp/reactor/peer.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+copying build/lib/exabgp/reactor/listener.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+copying build/lib/exabgp/reactor/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+copying build/lib/exabgp/reactor/daemon.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/ipvpn.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/rtc.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/nlri.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/prefixv4.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/nlri.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/link.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/neighaddr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/prefix.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ifaceaddr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/linkid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ipreach.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/node.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/tlvs/ospfroute.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+copying build/lib/exabgp/bgp/message/update/nlri/bgpls/node.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/mac.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/nlri.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/prefix.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/segment.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/ethernetad.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/evpn/multicast.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn
+copying build/lib/exabgp/bgp/message/update/nlri/inet.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/mac.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/rd.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/esi.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/path.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/labels.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/etag.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/qualifier/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier
+copying build/lib/exabgp/bgp/message/update/nlri/flow.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/labelled.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/cidr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+copying build/lib/exabgp/bgp/message/update/nlri/vpls.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/attribute.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/localpref.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/origin.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/mprnlri.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/med.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/originatorid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/aspath.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/pmsi.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srigpprefixattr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/opaque.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igptags.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/ospfaddr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpflags.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/prefixmetric.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/igpextags.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srprefix.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/srrid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/prefix/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/linkstate.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/opaque.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/nodename.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/lterid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/isisarea.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/nodeflags.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/srcap.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/node/sralgo.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/srlg.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/opaque.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/mplsmask.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/maxbw.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/rterid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/temetric.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/unrsvpbw.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/sradjlan.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/protection.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/sradj.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/linkname.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/admingroup.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/rsvpbw.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/bgpls/link/igpmetric.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link
+copying build/lib/exabgp/bgp/message/update/attribute/atomicaggregate.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/generic.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/nexthop.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/aggregator.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/communities.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/rt_record.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/chso.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/origin.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/flowspec_scope.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/rt.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/encapsulation.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/l2info.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/community.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/extended/traffic.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended
+copying build/lib/exabgp/bgp/message/update/attribute/community/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large
+copying build/lib/exabgp/bgp/message/update/attribute/community/large/communities.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large
+copying build/lib/exabgp/bgp/message/update/attribute/community/large/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large
+copying build/lib/exabgp/bgp/message/update/attribute/community/large/community.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial
+copying build/lib/exabgp/bgp/message/update/attribute/community/initial/communities.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial
+copying build/lib/exabgp/bgp/message/update/attribute/community/initial/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial
+copying build/lib/exabgp/bgp/message/update/attribute/community/initial/community.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial
+copying build/lib/exabgp/bgp/message/update/attribute/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/aigp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/attributes.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/clusterlist.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/attribute/mpurnlri.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute
+copying build/lib/exabgp/bgp/message/update/eor.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update
+copying build/lib/exabgp/bgp/message/update/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update
+copying build/lib/exabgp/bgp/message/nop.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/direction.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/refresh.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/ms.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/negotiated.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/graceful.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/asn4.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/capability.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/capabilities.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/hostname.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/refresh.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/mp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/operational.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/unknown.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/capability/addpath.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability
+copying build/lib/exabgp/bgp/message/open/holdtime.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+copying build/lib/exabgp/bgp/message/open/asn.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+copying build/lib/exabgp/bgp/message/open/version.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+copying build/lib/exabgp/bgp/message/open/routerid.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+copying build/lib/exabgp/bgp/message/open/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open
+copying build/lib/exabgp/bgp/message/message.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/operational.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/notification.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/unknown.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/message/keepalive.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message
+copying build/lib/exabgp/bgp/timer.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp
+copying build/lib/exabgp/bgp/neighbor.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp
+copying build/lib/exabgp/bgp/fsm.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp
+copying build/lib/exabgp/bgp/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/netlink.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/healthcheck.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/control.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/bgp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/cli.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/tojson.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+copying build/lib/exabgp/application/bmp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/firewall.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/netlink.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/tc.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/route/neighbor.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/route/address.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/route/link.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/route/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/route/network.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route
+copying build/lib/exabgp/netlink/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/message.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/attributes.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/old.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+copying build/lib/exabgp/netlink/sequence.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol
+copying build/lib/exabgp/protocol/resource.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip
+copying build/lib/exabgp/protocol/ip/icmp.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/tcp
+copying build/lib/exabgp/protocol/ip/tcp/flag.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/tcp
+copying build/lib/exabgp/protocol/ip/tcp/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/tcp
+copying build/lib/exabgp/protocol/ip/fragment.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip
+copying build/lib/exabgp/protocol/ip/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/iso
+copying build/lib/exabgp/protocol/iso/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/iso
+copying build/lib/exabgp/protocol/family.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol
+copying build/lib/exabgp/protocol/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol
+copying build/lib/exabgp/version.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/pyparsing.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/gcdump.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/ordereddict.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/objgraph.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/docopt.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/cmd2.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/profiler.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/counter.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/six.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/lsprofcalltree.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/bitstring.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+copying build/lib/exabgp/vendoring/ipaddress.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib
+copying build/lib/exabgp/rib/change.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib
+copying build/lib/exabgp/rib/store.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib
+copying build/lib/exabgp/rib/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib
+copying build/lib/exabgp/logger.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+copying build/lib/exabgp/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/process
+copying build/lib/exabgp/configuration/process/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/process
+copying build/lib/exabgp/configuration/process/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/process
+copying build/lib/exabgp/configuration/usage.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+copying build/lib/exabgp/configuration/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+copying build/lib/exabgp/configuration/family.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/location.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/scope.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/section.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/format.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/error.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+copying build/lib/exabgp/configuration/core/tokeniser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn
+copying build/lib/exabgp/configuration/l2vpn/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn
+copying build/lib/exabgp/configuration/l2vpn/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn
+copying build/lib/exabgp/configuration/l2vpn/vpls.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn
+copying build/lib/exabgp/configuration/environment.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static
+copying build/lib/exabgp/configuration/static/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static
+copying build/lib/exabgp/configuration/static/mpls.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static
+copying build/lib/exabgp/configuration/static/route.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static
+copying build/lib/exabgp/configuration/static/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static
+copying build/lib/exabgp/configuration/capability.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+copying build/lib/exabgp/configuration/setup.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/scope.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/match.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/route.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/then.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+copying build/lib/exabgp/configuration/flow/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/operational
+copying build/lib/exabgp/configuration/operational/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/operational
+copying build/lib/exabgp/configuration/operational/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/operational
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor
+copying build/lib/exabgp/configuration/neighbor/parser.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor
+copying build/lib/exabgp/configuration/neighbor/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor
+copying build/lib/exabgp/configuration/neighbor/api.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor
+copying build/lib/exabgp/configuration/check.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/template
+copying build/lib/exabgp/configuration/template/neighbor.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/template
+copying build/lib/exabgp/configuration/template/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/template
+copying build/lib/exabgp/configuration/configuration.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+copying build/lib/exabgp/configuration/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/hashtable.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/usage.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/trace.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/od.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/panic.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/enumeration.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/coroutine.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/errstr.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/cache.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/dictionary.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/ip.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+copying build/lib/exabgp/util/test.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/data
+copying build/lib/exabgp/data/check.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/data
+copying build/lib/exabgp/data/__init__.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/data
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/debug.py to debug.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/__main__.py to __main__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/parser/text.py to text.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/parser/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/transcoder.py to transcoder.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/command/text.py to text.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/command/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response/text.py to text.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/response/json.py to json.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/processes.py to processes.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/options.py to options.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/api/api.py to api.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/tcp.py to tcp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/incoming.py to incoming.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/outgoing.py to outgoing.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/error.py to error.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/network/connection.py to connection.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/protocol.py to protocol.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/loop.py to loop.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/peer.py to peer.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/listener.py to listener.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/reactor/daemon.py to daemon.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/ipvpn.py to ipvpn.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/rtc.py to rtc.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/nlri.py to nlri.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/prefixv4.py to prefixv4.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/nlri.py to nlri.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/link.py to link.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/neighaddr.py to neighaddr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/prefix.py to prefix.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/ifaceaddr.py to ifaceaddr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/linkid.py to linkid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/ipreach.py to ipreach.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/node.py to node.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/tlvs/ospfroute.py to ospfroute.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/bgpls/node.py to node.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/mac.py to mac.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/nlri.py to nlri.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/prefix.py to prefix.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/segment.py to segment.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/ethernetad.py to ethernetad.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/evpn/multicast.py to multicast.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/inet.py to inet.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/mac.py to mac.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/rd.py to rd.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/esi.py to esi.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/path.py to path.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/labels.py to labels.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/etag.py to etag.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/qualifier/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/flow.py to flow.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/labelled.py to labelled.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/cidr.py to cidr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/nlri/vpls.py to vpls.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/attribute.py to attribute.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/localpref.py to localpref.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/origin.py to origin.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/mprnlri.py to mprnlri.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/med.py to med.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/originatorid.py to originatorid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/aspath.py to aspath.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/pmsi.py to pmsi.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/srigpprefixattr.py to srigpprefixattr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/opaque.py to opaque.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/igptags.py to igptags.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/ospfaddr.py to ospfaddr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/igpflags.py to igpflags.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/prefixmetric.py to prefixmetric.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/igpextags.py to igpextags.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/srprefix.py to srprefix.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/srrid.py to srrid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/prefix/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/linkstate.py to linkstate.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/opaque.py to opaque.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/nodename.py to nodename.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/lterid.py to lterid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/isisarea.py to isisarea.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/nodeflags.py to nodeflags.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/srcap.py to srcap.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/node/sralgo.py to sralgo.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/srlg.py to srlg.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/opaque.py to opaque.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/mplsmask.py to mplsmask.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/maxbw.py to maxbw.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/rterid.py to rterid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/temetric.py to temetric.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/unrsvpbw.py to unrsvpbw.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/sradjlan.py to sradjlan.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/protection.py to protection.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/sradj.py to sradj.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/linkname.py to linkname.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/admingroup.py to admingroup.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/rsvpbw.py to rsvpbw.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/bgpls/link/igpmetric.py to igpmetric.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/atomicaggregate.py to atomicaggregate.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/generic.py to generic.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/nexthop.py to nexthop.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/aggregator.py to aggregator.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/communities.py to communities.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/rt_record.py to rt_record.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/chso.py to chso.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/origin.py to origin.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/flowspec_scope.py to flowspec_scope.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/rt.py to rt.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/encapsulation.py to encapsulation.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/l2info.py to l2info.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/community.py to community.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/extended/traffic.py to traffic.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large/communities.py to communities.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/large/community.py to community.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial/communities.py to communities.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/community/initial/community.py to community.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/aigp.py to aigp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/attributes.py to attributes.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/clusterlist.py to clusterlist.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/attribute/mpurnlri.py to mpurnlri.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/eor.py to eor.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/update/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/nop.py to nop.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/direction.py to direction.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/refresh.py to refresh.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/ms.py to ms.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/negotiated.py to negotiated.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/graceful.py to graceful.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/asn4.py to asn4.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/capability.py to capability.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/capabilities.py to capabilities.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/hostname.py to hostname.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/refresh.py to refresh.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/mp.py to mp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/operational.py to operational.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/unknown.py to unknown.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/capability/addpath.py to addpath.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/holdtime.py to holdtime.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/asn.py to asn.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/version.py to version.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/routerid.py to routerid.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/open/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/message.py to message.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/operational.py to operational.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/notification.py to notification.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/unknown.py to unknown.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/message/keepalive.py to keepalive.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/timer.py to timer.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/neighbor.py to neighbor.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/fsm.py to fsm.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/bgp/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/netlink.py to netlink.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/healthcheck.py to healthcheck.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/control.py to control.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/bgp.py to bgp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/cli.py to cli.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/tojson.py to tojson.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/application/bmp.py to bmp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/firewall.py to firewall.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/netlink.py to netlink.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/tc.py to tc.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route/neighbor.py to neighbor.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route/address.py to address.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route/link.py to link.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/route/network.py to network.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/message.py to message.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/attributes.py to attributes.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/old.py to old.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/netlink/sequence.py to sequence.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/resource.py to resource.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/icmp.py to icmp.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/tcp/flag.py to flag.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/tcp/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/fragment.py to fragment.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/ip/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/iso/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/family.py to family.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/protocol/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/version.py to version.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/pyparsing.py to pyparsing.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/gcdump.py to gcdump.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/ordereddict.py to ordereddict.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/objgraph.py to objgraph.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/docopt.py to docopt.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/cmd2.py to cmd2.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/profiler.py to profiler.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/counter.py to counter.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/six.py to six.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/lsprofcalltree.py to lsprofcalltree.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/bitstring.py to bitstring.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/vendoring/ipaddress.py to ipaddress.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib/change.py to change.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib/store.py to store.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/rib/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/logger.py to logger.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/process/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/process/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/usage.py to usage.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/family.py to family.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/location.py to location.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/scope.py to scope.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/section.py to section.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/format.py to format.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/error.py to error.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/core/tokeniser.py to tokeniser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/l2vpn/vpls.py to vpls.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/environment.py to environment.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static/mpls.py to mpls.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static/route.py to route.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/static/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/capability.py to capability.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/setup.py to setup.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/scope.py to scope.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/match.py to match.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/route.py to route.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/then.py to then.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/flow/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/operational/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/operational/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor/parser.py to parser.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/neighbor/api.py to api.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/check.py to check.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/template/neighbor.py to neighbor.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/template/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/configuration.py to configuration.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/configuration/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/hashtable.py to hashtable.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/usage.py to usage.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/trace.py to trace.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/od.py to od.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/panic.py to panic.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/enumeration.py to enumeration.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/coroutine.py to coroutine.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/errstr.py to errstr.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/cache.py to cache.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/dictionary.py to dictionary.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/ip.py to ip.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/__init__.py to __init__.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/util/test.py to test.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/data/check.py to check.pyc
+byte-compiling /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp/data/__init__.py to __init__.pyc
+writing byte-compilation script '/tmp/tmp6EmlKJ.py'
+/usr/bin/python2 -O /tmp/tmp6EmlKJ.py
+removing /tmp/tmp6EmlKJ.py
+running install_data
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/dynamic-1.pl -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/watchdog-1.pl -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/read-write.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/dynamic-1.sh -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/tcp-server -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/watchdog-1.sh -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/stderr-1.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+copying etc/exabgp/processes/syslog-1.py -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/processes
+creating /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/flow-redirect.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/vpn.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-reload.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/process.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-reload.1.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-multisession.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/watchdog.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-api.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ipv6grouping.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ipself6.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-broken-flow.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/multisession.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/parity.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-broken-flow.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-api.nothing.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-vpnv4.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/name.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-nexthop-self.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-notification.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-flow.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/multiple-process.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-teardown.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-multisession.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/aggregator.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-notification.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-vpls.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/unknowncap.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ttl.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/manual-eor.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-flow.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-api.receive.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-attributes.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/l2vpn.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-reload.2.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-attributes.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-teardown.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-eor.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-eor.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/group.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/split.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ipv46routes6family.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/simple-v6.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/attributes.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-fast.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-nexthop-self.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-vpls.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/dual-neighbor.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/watchdog.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-nexthop.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-multi-neighbor.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/md5.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-open.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-announce.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-open.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/flow.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-announcement.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/simple-v4.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-fast.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/largecommunity.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-nexthop.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/manual-eor.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/path-information.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-multi-neighbor.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/template.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ipself4.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/community.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-check.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/no-asn4.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/group-limit.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-vpnv4.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/ipv46routes4family.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/generic-attribute.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-check.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-add-remove.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/addpath.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-add-remove.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-announce.run -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+copying qa/conf/api-announcement.conf -> /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc
+running install_egg_info
+running egg_info
+creating lib/exabgp.egg-info
+writing lib/exabgp.egg-info/PKG-INFO
+writing top-level names to lib/exabgp.egg-info/top_level.txt
+writing dependency_links to lib/exabgp.egg-info/dependency_links.txt
+writing entry points to lib/exabgp.egg-info/entry_points.txt
+writing manifest file 'lib/exabgp.egg-info/SOURCES.txt'
+reading manifest file 'lib/exabgp.egg-info/SOURCES.txt'
+writing manifest file 'lib/exabgp.egg-info/SOURCES.txt'
+Copying lib/exabgp.egg-info to /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7/site-packages/exabgp-4.0.0_0478a014-py2.7.egg-info
+running install_scripts
+Installing exabgp script to /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/bin
++ install bin/healthcheck /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/bin
++ mv /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/bin /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/sbin
++ mv /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/sbin/healthcheck /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/sbin/exabgp-healthcheck
++ install -d -m 744 /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//etc/
++ install -d -m 755 /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//etc/exabgp/examples
++ mv /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/addpath.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/aggregator.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-add-remove.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-add-remove.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-announce.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-announce.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-announcement.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-announcement.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-api.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-api.nothing.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-api.receive.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-attributes.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-attributes.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-broken-flow.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-broken-flow.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-check.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-check.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-eor.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-eor.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-fast.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-fast.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-flow.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-flow.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-multi-neighbor.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-multi-neighbor.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-multisession.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-multisession.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-nexthop-self.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-nexthop-self.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-nexthop.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-nexthop.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-notification.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-notification.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-open.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-open.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-reload.1.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-reload.2.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-reload.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-teardown.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-teardown.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-vpls.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-vpls.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-vpnv4.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/api-vpnv4.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/attributes.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/community.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/dual-neighbor.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/flow-redirect.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/flow.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/generic-attribute.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/group-limit.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/group.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ipself4.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ipself6.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ipv46routes4family.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ipv46routes6family.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ipv6grouping.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/l2vpn.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/largecommunity.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/manual-eor.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/manual-eor.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/md5.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/multiple-process.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/multisession.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/name.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/no-asn4.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/parity.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/path-information.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/process.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/simple-v4.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/simple-v6.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/split.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/template.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/ttl.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/unknowncap.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/vpn.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/watchdog.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/exabgp/etc/watchdog.run /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//etc/exabgp/examples
++ install -d /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/lib/systemd/system
++ install etc/systemd/exabgp.service /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/lib/systemd/system/
++ install -d /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/share/man/man1
++ install doc/man/exabgp.1 /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/share/man/man1
++ install -d /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/share/man/man5
++ install doc/man/exabgp.conf.5 /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//usr/share/man/man5
++ ln -s /etc/exabgp/examples/api-api.conf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64//etc/exabgp/exabgp.conf
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/exabgp-4.0.0
+find: 'debug': No such file or directory
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
+Bytecompiling .py files below /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/lib/python2.7 using /usr/bin/python2.7
++ /usr/lib/rpm/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: python-exabgp-4.0.0-1.fc25.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.3Kj3ve
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ DOCDIR=/builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/python-exabgp
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/python-exabgp
++ cp -pr CHANGELOG /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/python-exabgp
++ cp -pr README.md /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/python-exabgp
++ exit 0
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.dFSROs
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ LICENSEDIR=/builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/python-exabgp
++ export LICENSEDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/python-exabgp
++ cp -pr COPYRIGHT /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/python-exabgp
++ exit 0
+Provides: python-exabgp = 4.0.0-1.fc25 python2.7dist(exabgp) = 4.0.0-0478a014 python2dist(exabgp) = 4.0.0-0478a014
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: python(abi) = 2.7
+Processing files: exabgp-4.0.0-1.fc25.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.j980Jv
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ DOCDIR=/builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/exabgp
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/exabgp
++ cp -pr CHANGELOG /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/exabgp
++ cp -pr README.md /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/doc/exabgp
++ exit 0
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.2lY2Fy
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ LICENSEDIR=/builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/exabgp
++ export LICENSEDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/exabgp
++ cp -pr COPYRIGHT /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64/usr/share/licenses/exabgp
++ exit 0
+Provides: config(exabgp) = 4.0.0-1.fc25 exabgp = 4.0.0-1.fc25
+Requires(interp): /bin/sh /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /bin/sh
+Requires(preun): /bin/sh
+Requires(postun): /bin/sh
+Requires: /bin/sh /usr/bin/env /usr/bin/perl /usr/bin/python2
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
+Wrote: /builddir/build/RPMS/python-exabgp-4.0.0-1.fc25.noarch.rpm
+Wrote: /builddir/build/RPMS/exabgp-4.0.0-1.fc25.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.K4rPTF
++ umask 022
++ cd /builddir/build/BUILD
++ cd exabgp-4.0.0
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/python-exabgp-4.0.0-1.fc25.x86_64
++ exit 0
+Child return code was: 0
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4
+Mock Version: 1.3.4

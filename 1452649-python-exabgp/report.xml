@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<analysis>
+    <metadata>
+        <generator build="f03e4e7 2016-05-02 14:21:43 +0200" name="fedora-review" version="0.6.1"/>
+        <file given-path="python-exabgp.spec">
+            <hash alg="sha224" hexdigest="13b1b0ecb044f5edcbdb7030658ac3b959db861377bc95402d373f85"/>
+        </file>
+        <sut>
+            <source-rpm name="python-exabgp" release="1.fc25" version="4.0.0"/>
+        </sut>
+    </metadata>
+    <results>
+        <issue severity="MUST" test-id="CheckFilePermissions">
+            <message>Permissions on files are set properly.</message>
+            <location>
+                <file given-path="python-exabgp.spec"/>
+            </location>
+            <notes>See rpmlint output</notes>
+        </issue>
+    </results>
+</analysis>

@@ -83,12 +83,15 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %license COPYRIGHT
 
 %files -n exabgp
-%attr(744, root, root) %{_libdir}/exabgp/*
+
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
-%dir %{_datadir}/exabgp
 %dir %{_libdir}/exabgp
+%dir %{_datadir}/exabgp
+%dir %{_sysconfdir}/exabgp
+%attr(644, root, root) %{_libdir}/exabgp/*
 %attr(744, root, root) %{_datadir}/exabgp/processes/*
+
 %{_unitdir}/exabgp.service
 %doc CHANGELOG README.md
 %license COPYRIGHT

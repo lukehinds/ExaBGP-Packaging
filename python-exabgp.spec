@@ -83,6 +83,7 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %license COPYRIGHT
 
 %files -n exabgp
+%attr(744, root, root) %{_libdir}/exabgp/*
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
 %dir %{_datadir}/exabgp
@@ -93,8 +94,8 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %license COPYRIGHT
 %{_mandir}/man1/*
 %{_mandir}/man5/*
+
 %config(noreplace) %{_sysconfdir}/exabgp/exabgp.conf
-%config(noreplace) %{_libdir}/exabgp/*
 
 %changelog
 * Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0

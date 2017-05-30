@@ -27,6 +27,7 @@ Group:          Applications/Internet
 BuildRequires:  systemd-units
 BuildRequires:  python2-devel
 Requires:       systemd
+Requires: %{name} = %{version}-%{release}
 
 %description -n exabgp
 ExaBGP allows engineers to control their network from commodity servers.
@@ -78,10 +79,9 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %license COPYRIGHT
 
 %files -n exabgp
-%defattr(-,root,root,-)
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
-%dir %{_datadir}/exabgp
+#%dir %{_datadir}/exabgp
 %dir %{_sysconfdir}/exabgp
 %dir %{_sysconfdir}/exabgp/examples
 %attr(744, root, root) %{_datadir}/exabgp/processes/*

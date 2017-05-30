@@ -88,6 +88,7 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
 %dir %{_libdir}/exabgp
 %dir %{_datadir}/exabgp
+%dir %{_datadir}/exabgp/processes
 %dir %{_sysconfdir}/exabgp
 %attr(644, root, root) %{_libdir}/exabgp/*
 %attr(744, root, root) %{_datadir}/exabgp/processes/*

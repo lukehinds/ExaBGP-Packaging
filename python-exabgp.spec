@@ -49,9 +49,12 @@ withdraw dead ones from the network during failures/maintenances.
 install bin/healthcheck ${RPM_BUILD_ROOT}%{_bindir}
 mv ${RPM_BUILD_ROOT}%{_bindir} ${RPM_BUILD_ROOT}%{_sbindir}
 mv ${RPM_BUILD_ROOT}%{_sbindir}/healthcheck ${RPM_BUILD_ROOT}/%{_sbindir}/exabgp-healthcheck
-install -d -m 744 ${RPM_BUILD_ROOT}/%{_sysconfdir}/
-install -d -m 755 ${RPM_BUILD_ROOT}/%{_sysconfdir}/exabgp/examples
-mv ${RPM_BUILD_ROOT}/usr/share/exabgp/etc/* ${RPM_BUILD_ROOT}/%{_sysconfdir}/exabgp/examples
+
+
+install -d -m 744 ${RPM_BUILD_ROOT}/%{_sysconfdir}/exabgp
+install -d -m 755 ${RPM_BUILD_ROOT}/%{_libdir}/exabgp
+
+mv ${RPM_BUILD_ROOT}/usr/share/exabgp/etc/* ${RPM_BUILD_ROOT}/%{_libdir}/exabgp/
 
 install -d %{buildroot}/%{_unitdir}
 install etc/systemd/exabgp.service %{buildroot}/%{_unitdir}/
@@ -63,7 +66,7 @@ install -d %{buildroot}/%{_mandir}/man5
 install doc/man/exabgp.conf.5 %{buildroot}/%{_mandir}/man5
 
 # Sample .conf
-ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.conf
+ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.conf
 
 %post -n exabgp
 %systemd_post exabgp.service
@@ -83,8 +86,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
 %dir %{_datadir}/exabgp
-%dir %{_sysconfdir}/exabgp
-%dir %{_sysconfdir}/exabgp/examples
+%dir %{_libdir}/exabgp
 %attr(744, root, root) %{_datadir}/exabgp/processes/*
 %{_unitdir}/exabgp.service
 %doc CHANGELOG README.md
@@ -92,7 +94,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %{_mandir}/man1/*
 %{_mandir}/man5/*
 %config(noreplace) %{_sysconfdir}/exabgp/exabgp.conf
-%config(noreplace) %{_sysconfdir}/exabgp/examples/*
+%config(noreplace) %{_libdir}/exabgp/*
 
 %changelog
 * Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0

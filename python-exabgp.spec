@@ -81,9 +81,10 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %defattr(-,root,root,-)
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
+%dir %{_datadir}/exabgp
 %dir %{_sysconfdir}/exabgp
 %dir %{_sysconfdir}/exabgp/examples
-%attr(744, root, root) %{_prefix}/share/exabgp/processes/*
+%attr(744, root, root) %{_datadir}/exabgp/processes/*
 %{_unitdir}/exabgp.service
 %doc CHANGELOG README.md
 %license COPYRIGHT

@@ -26,6 +26,7 @@ Summary:        The BGP swiss army knife of networking
 Group:          Applications/Internet
 BuildRequires:  systemd-units
 BuildRequires:  python2-devel
+Requires:       python-exabgp
 Requires:       systemd
 Requires: %{name} = %{version}-%{release}
 
@@ -81,7 +82,7 @@ ln -s %{_sysconfdir}/exabgp/examples/api-api.conf %{buildroot}/%{_sysconfdir}/ex
 %files -n exabgp
 %attr(755, root, root) %{_sbindir}/exabgp
 %attr(755, root, root) %{_sbindir}/exabgp-healthcheck
-#%dir %{_datadir}/exabgp
+%dir %{_datadir}/exabgp
 %dir %{_sysconfdir}/exabgp
 %dir %{_sysconfdir}/exabgp/examples
 %attr(744, root, root) %{_datadir}/exabgp/processes/*

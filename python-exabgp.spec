@@ -13,22 +13,20 @@ URL:            https://github.com/Exa-Networks/
 Source0:        https://github.com/Exa-Networks/%{srcname}/archive/%{version}.tar.gz
 BuildArch:      noarch
 
-%if 0%{?with_python2}
+
 BuildRequires:  python2-devel
-BuildRequires:  python2-setuptools
-%endif
+BuildRequires:  python-setuptools
 
 BuildRequires:  python3-devel
-BuildRequires:  systemd-units
-BuildRequires:  python-six
+BuildRequires:  python3-setuptools
 
 %description
 ExaBGP python module
 
-%package -n python2-%{srcname}
+%package -n     python2-%{srcname}
 Summary:        %{summary}
 Group:          Applications/Internet
-Requires:       python2-%{srcname}
+Requires:       python-setuptools
 Requires:       systemd
 Requires:       python-ipaddr
 Requires:       python2-six
@@ -45,11 +43,11 @@ withdraw dead ones from the network during failures/maintenances.
 %package -n python3-%{srcname}
 Summary:        %{summary}
 Group:          Applications/Internet
-#Requires:       python3-%{srcname}
+Requires:       python3-setuptools
 Requires:       systemd
 Requires:       python-ipaddr
 Requires:       python3-six
-#Requires: %{name} = %{version}-%{release}
+Requires: %{name} = %{version}-%{release}
 %{?python_provide:%python_provide python3-%{srcname}}
 
 %description -n python3-%{srcname}
@@ -70,6 +68,27 @@ withdraw dead ones from the network during failures/maintenances.
 
 %py3_install
 %{__python3} setup.py install -O1 --root ${RPM_BUILD_ROOT}
+
+install bin/healthcheck ${RPM_BUILD_ROOT}%{_bindir}
+mv ${RPM_BUILD_ROOT}%{_bindir} ${RPM_BUILD_ROOT}%{_sbindir}
+mv ${RPM_BUILD_ROOT}%{_sbindir}/healthcheck ${RPM_BUILD_ROOT}/%{_sbindir}/exabgp-healthcheck
+
+install -d -m 744 ${RPM_BUILD_ROOT}/%{_sysconfdir}/exabgp
+install -d -m 755 ${RPM_BUILD_ROOT}/%{_libdir}/exabgp
+
+mv ${RPM_BUILD_ROOT}/usr/share/exabgp/etc/* ${RPM_BUILD_ROOT}/%{_libdir}/exabgp/
+
+install -d %{buildroot}/%{_unitdir}
+install etc/systemd/exabgp.service %{buildroot}/%{_unitdir}/
+
+install -d %{buildroot}/%{_mandir}/man1
+install doc/man/exabgp.1 %{buildroot}/%{_mandir}/man1
+
+install -d %{buildroot}/%{_mandir}/man5
+install doc/man/exabgp.conf.5 %{buildroot}/%{_mandir}/man5
+
+# Sample .conf
+ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.conf
 
 %py2_install
 %{__python2} setup.py install -O1 --root ${RPM_BUILD_ROOT}

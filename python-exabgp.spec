@@ -13,13 +13,14 @@ URL:            https://github.com/Exa-Networks/
 Source0:        https://github.com/Exa-Networks/%{srcname}/archive/%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python2-setuptools 
-BuildRequires:  python3-setuptools
-BuildRequires:  python-six
+%if 0%{?with_python2}
+BuildRequires:  python2-devel
+BuildRequires:  python2-setuptools
+%endif
 
-Requires:       python2 >= 2.6
-Requires:       python-ipaddr
-Requires:       python-six
+BuildRequires:  python3-devel
+BuildRequires:  systemd-units
+BuildRequires:  python-six
 
 %description
 ExaBGP python module
@@ -27,10 +28,10 @@ ExaBGP python module
 %package -n python2-%{srcname}
 Summary:        %{summary}
 Group:          Applications/Internet
-BuildRequires:  systemd-units
-BuildRequires:  python2-devel
 Requires:       python2-%{srcname}
 Requires:       systemd
+Requires:       python-ipaddr
+Requires:       python2-six
 Requires: %{name} = %{version}-%{release}
 %{?python_provide:%python_provide python2-%{srcname}}
 
@@ -44,11 +45,11 @@ withdraw dead ones from the network during failures/maintenances.
 %package -n python3-%{srcname}
 Summary:        %{summary}
 Group:          Applications/Internet
-BuildRequires:  systemd-units
-BuildRequires:  python3-devel
-Requires:       python3-%{srcname}
+#Requires:       python3-%{srcname}
 Requires:       systemd
-Requires: %{name} = %{version}-%{release}
+Requires:       python-ipaddr
+Requires:       python3-six
+#Requires: %{name} = %{version}-%{release}
 %{?python_provide:%python_provide python3-%{srcname}}
 
 %description -n python3-%{srcname}
@@ -94,13 +95,13 @@ install doc/man/exabgp.conf.5 %{buildroot}/%{_mandir}/man5
 # Sample .conf
 ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.conf
 
-%post -n exabgp
+%post -n python-%{srcname}
 %systemd_post exabgp.service
 
-%preun -n exabgp
+%preun -n python-%{srcname}
 %systemd_preun exabgp.service
 
-%postun -n exabgp
+%postun -n python-%{srcname}
 %systemd_postun_with_restart exabgp.service
 
 %files -n python2-%{srcname}
@@ -137,7 +138,7 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %config(noreplace) %{_sysconfdir}/exabgp/exabgp.conf
 
 %changelog
-* Mon June 26 2017 Luke Hinds <lhinds@redhat.com> - 4.0.1
+* Mon Jun 26 2017 Luke Hinds <lhinds@redhat.com> - 4.0.1
 - Python 3 support and 4.0.1 release
 * Fri May 19 2017 Luke Hinds <lhinds@redhat.com> - 4.0.0
 - Initial release

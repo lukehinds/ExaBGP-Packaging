@@ -93,7 +93,7 @@ ln -s %{_libdir}/exabgp/api-api.conf %{buildroot}/%{_sysconfdir}/exabgp/exabgp.c
 %py2_install
 %{__python2} setup.py install -O1 --root ${RPM_BUILD_ROOT}
 
-install bin/healthcheck ${RPM_BUILD_ROOT}%{_bindir}
+#install bin/healthcheck ${RPM_BUILD_ROOT}%{_bindir}
 mv ${RPM_BUILD_ROOT}%{_bindir} ${RPM_BUILD_ROOT}%{_sbindir}
 mv ${RPM_BUILD_ROOT}%{_sbindir}/healthcheck ${RPM_BUILD_ROOT}/%{_sbindir}/exabgp-healthcheck
 
